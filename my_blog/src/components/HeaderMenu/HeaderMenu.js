@@ -8,10 +8,10 @@ const headerMenu = (props) => {
     return (
         <div className="my-head--menu">
             <ul>
-                <li className={(pathname == '/') ? 'active' : ''}><Link to="/">Home</Link></li>
-                <li className={(pathname == '/branch') ? 'active' : ''}><Link to="/branch">Branch</Link></li>
-                <li className={(pathname == '/blog') ? 'active' : ''}><Link to="/blog">Blog</Link></li>
-                <li className={(pathname == '/crypto') ? 'active' : ''}><Link to="/crypto">Crypto</Link></li>
+                <li className={(pathname === '/') ? 'active' : ''}><Link to="/">Home</Link></li>
+                <li className={(pathname === '/branch') ? 'active' : ''}><Link to="/branch">Branch</Link></li>
+                <li className={(pathname === '/blog') ? 'active' : ''}><Link to="/blog">Blog</Link></li>
+                <li className={(pathname === '/crypto') ? 'active' : ''}><Link to="/crypto">Crypto</Link></li>
             </ul>
         </div>  
     )

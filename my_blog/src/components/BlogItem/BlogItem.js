@@ -8,7 +8,7 @@ const blogItem = ({ item }) => {
         <div className="block_item">
             <Link to={`/blog/${id}`}>
                 <div className="block--image">
-                    <img src={img} />
+                    <img src={img} alt="" />
                 </div>
                 <div className="block--content">
                     <div className="content_title">

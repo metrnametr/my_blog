@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Switch, BrowserRouter as Router, Route } from 'react-router-dom';
-import HeaderMenu from '../../component/HeaderMenu';
+import HeaderMenu from '../../components/HeaderMenu';
 import LoginPage from '../login-page';
 import HomePage from '../home-page';
 import NotFoundPage from '../not-found-page'

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Blog from '../../quiries/blog';
-import BlogList from '../../component/BlogList';
+import BlogList from '../../components/BlogList';
 
 const blog = new Blog();
 
