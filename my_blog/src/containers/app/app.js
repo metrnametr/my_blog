@@ -4,9 +4,10 @@ import HeaderMenu from '../../components/HeaderMenu';
 import LoginPage from '../login-page';
 import HomePage from '../home-page';
 import NotFoundPage from '../not-found-page'
-import './style.css';
+import './style.scss';
 import BlogPage from '../blog-page';
 import BlogItemPage from '../blog-item-page';
+
 
 class App extends Component {
 

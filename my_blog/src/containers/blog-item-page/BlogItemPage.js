@@ -9,7 +9,7 @@ class BlogItemPage extends Component {
 
         },
         loading: false,
-        text: '',
+        body: '',
     }
     componentDidMount() {
         this.fetchItem();
@@ -26,15 +26,18 @@ class BlogItemPage extends Component {
             this.setState({
                 item,
                 loading: false,
-                text: item.text,
+                body: item.body,
             })
         }
     }
     render() {
-        const { text } = this.state;
+        const { loading, body } = this.state;
+        if (loading) {
+            return <div>Loading</div>
+        }
         return (
             <div>   
-                <div dangerouslySetInnerHTML={{ __html: text }}/>
+                <div dangerouslySetInnerHTML={{ __html: body }}/>
             </div>
         )
     }

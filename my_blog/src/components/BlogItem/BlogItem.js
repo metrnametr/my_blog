@@ -3,7 +3,8 @@ import { Link } from 'react-router-dom';
 import './style.scss';
 
 const blogItem = ({ item }) => {
-    const { id, title, description, img } = item;
+    const { _id, title, description, img } = item;
+    const id = _id;
     return (
         <div className="block_item">
             <Link to={`/blog/${id}`}>
@@ -13,6 +14,16 @@ const blogItem = ({ item }) => {
                 <div className="block--content">
                     <div className="content_title">
                         <h2>{title}</h2>
+                    </div>
+                    <div className="content_info">
+                        <div className="content_info--date">
+                            <span className="date">03.12.2019</span>
+                            <span className="time">15:00</span>
+                        </div>
+                        <div className="content_info--likes">
+                            <span className="like">Like: </span>
+                            <span className="like-count">3000</span>
+                        </div>
                     </div>
                     <div className="content_description">
                         <p>{description}...</p>

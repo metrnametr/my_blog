@@ -4,6 +4,9 @@ const blogSchema = new Schema({
     id: {
         type: SchemaTypes.ObjectId,
     },
+    date: {
+        type: SchemaTypes.Date,
+    },
     img: {
         type: String,
         required: true,

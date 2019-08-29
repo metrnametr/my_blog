@@ -1,6 +1,11 @@
+@import '../../styles/variables.scss';
+
 .my-head--menu{
-    background: black;
-    color: white;
+    background: white;
+    color: $primary_color_text;
+    width: 60%;
+    margin: 0 auto;
+    font-size: .7em;
 }
 
 .my-head--menu ul li{
@@ -12,9 +17,8 @@
 }
 
 .my-head--menu ul li:hover{
-    background: white;
     a {
-        color: black;
+        color: $primary_color_hover_text;
     }
 }
 
@@ -22,14 +26,14 @@
     &.active{
         background: white;
         a {
-            color: black;
+            color: $primary_color_hover_text;
         }
     }
 }
 
 .my-head--menu ul li a {
     text-decoration: none;
-    color: white;
+    color: $primary_color_text;
 }
 
 .my-head--menu ul {
@@ -39,6 +43,6 @@
     padding: 0;
     li {
         margin: 10px;
-        padding: 15px;
+        padding: 10px;
     }
 }
