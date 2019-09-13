@@ -1,0 +1,22 @@
+{
+  "name": "my_blog",
+  "version": "1.0.0",
+  "description": "- cd api \r - npm install\r - npm start",
+  "main": "index.js",
+  "scripts": {
+    "start": "cd api && npm i && cd .. && cd my_blog && npm i && cd ..",
+    "watch": "cd api && npm start && cd .. && cd my_blog && npm start && cd ..",
+    "test": "echo Error: no test specified && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/metrnametr/my_blog.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/metrnametr/my_blog/issues"
+  },
+  "homepage": "https://github.com/metrnametr/my_blog#readme"
+}

@@ -1,9 +1,10 @@
-# back
-- cd api 
-- npm install
-- npm start
+# add basedata mongo config env
+- cd api
+- create file .env
+- add const `ADMIN_NAME` and  `ADMIN_PASSWORD` for your mongodb
 
-# front
-- cd my_blog
-- npm install
-- npm start
+# install dependecies
+`npm start`
+
+# start project
+`npm run watch`
