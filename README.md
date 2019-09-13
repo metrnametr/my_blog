@@ -1,9 +1,9 @@
-# back
-- cd api 
-- npm install
-- npm start
+# add basedata mongo config env
+- cd api
+- check file .env
 
-# front
-- cd my_blog
-- npm install
-- npm start
+# install dependecies
+[] npm start
+
+# start propject
+[] npm run watch
