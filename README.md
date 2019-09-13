@@ -1,6 +1,6 @@
 # add basedata mongo config env
 - cd api
-- check file .env
+- create file .env
 - add const `ADMIN_NAME` and  `ADMIN_PASSWORD` for your mongodb
 
 # install dependecies
