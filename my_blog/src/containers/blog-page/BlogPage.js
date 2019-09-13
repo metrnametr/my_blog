@@ -1,49 +1,21 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Blog from '../../quiries/blog';
 import BlogList from '../../components/BlogList';
+import BlogPagination from '../../components/BlogPagination';
+import withFetch from '../../components/hoc/withFetch';
 
 const blog = new Blog();
-
-class BlogPage extends Component {
-    state = {
-        itemsBlog: [
-
-        ],
-        error: false,
-        loading: false,
+const BlogPage = ({ data, loading }) => {
+    const { blogItems, count } = data;
+    if (!blogItems) {
+        return <div>loading</div>
     }
-
-    componentDidMount() {
-        this.fetchDataBlog();
-        this.setState({
-            loading: true,
-        });
-    }
-
-    fetchDataBlog = async () => {
-        const itemsBlog = await blog.getItems();
-        if (itemsBlog) {
-            this.setState({
-                itemsBlog,
-                loading: false,
-            })
-        }
-    }
-
-    render() {
-        const { error, loading, itemsBlog } = this.state;
-        if (error) {
-            return <div>Ошибка</div>
-        }
-        if (loading) {
-            return <div>Loading</div>
-        }
-        return (
-            <>
-                <BlogList itemsBlog={itemsBlog} />
-            </>
-        )
-    }
+    return (
+        <>
+            <BlogList itemsBlog={blogItems} />
+            <BlogPagination countPage={count} />
+        </>
+    )
 }
 
-export default BlogPage;
+export default withFetch(BlogPage)(blog.getItemsPage);

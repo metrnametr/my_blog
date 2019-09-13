@@ -1,9 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { times } from 'lodash';
 import './style.scss';
 
 const blogItem = ({ item }) => {
-    const { _id, title, description, img } = item;
+    const {
+        _id, date, title, countLike, description, img,
+    } = item;
     const id = _id;
     return (
         <div className="block_item">
@@ -22,7 +25,7 @@ const blogItem = ({ item }) => {
                         </div>
                         <div className="content_info--likes">
                             <span className="like">Like: </span>
-                            <span className="like-count">3000</span>
+                            <span className="like-count">{countLike}</span>
                         </div>
                     </div>
                     <div className="content_description">

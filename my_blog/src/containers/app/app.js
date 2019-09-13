@@ -8,6 +8,7 @@ import './style.scss';
 import BlogPage from '../blog-page';
 import BlogItemPage from '../blog-item-page';
 
+import SideBar from '../../components/SideBar';
 
 class App extends Component {
 
@@ -24,17 +25,29 @@ class App extends Component {
             >                
                 <Router>
                     <HeaderMenu />
-                    <Switch>
-                        <Route exact path='/' component={HomePage} />
-                        <Route path='/login' component={LoginPage} />
-                        <Route path='/blog/:id' component={BlogItemPage} />
-                        <Route path='/blog' component={BlogPage} />
-                        <Route component={NotFoundPage} />
-                    </Switch>
+                    <div className="main-layout container">
+                        <div className="left-container">
+                            <Switch>
+                                <Route exact path='/' component={HomePage} />
+                                <Route path='/login' component={LoginPage} />
+                                <Route exact path='/blog/:id' component={BlogItemPage} />
+                                <Route path='/blog/page/:countPage' component={BlogPage} />
+                                <Route path='/blog' component={BlogPage} />                                
+                                <Route component={NotFoundPage} />
+                            </Switch>
+                        </div>
+                        <div className="right-container">
+                            <SideBar />
+                        </div>
+                    </div>
                 </Router>
             </div>
         )
     }
 }
+
+const conn = new WebSocket('ws://localhost:3001/echo')
+conn.onmessage = function(e){ console.log(e.data); };
+conn.onopen = () => console.log('qweqw');
 
 export default App;

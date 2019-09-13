@@ -7,6 +7,10 @@ const blogSchema = new Schema({
     date: {
         type: SchemaTypes.Date,
     },
+    countLike: {
+        type: Number,
+        required: true,
+    },
     img: {
         type: String,
         required: true,

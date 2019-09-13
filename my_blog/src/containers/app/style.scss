@@ -1,5 +1,10 @@
 @import '../../styles/variables.scss';
 
+* {
+    box-sizing: border-box;
+    -webkit-font-smoothing: subpixel-antialiased;
+}
+
 body{
     margin: 0;
     padding: 0;
@@ -8,5 +13,21 @@ body{
     a {
         text-decoration: none;
         color: $primary_color_text;
+    }
+}
+
+.main-layout{
+    display: flex;
+    margin-top: 1.5em;
+    .left-container{
+        max-width: 70%;
+        min-width: 70%;
+    }
+    @media screen and (max-width: 768px){
+        flex-direction: column;
+        .left-container{
+            max-width: 100%;
+            min-width: 70%;
+        }
     }
 }
